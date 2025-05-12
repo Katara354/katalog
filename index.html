@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Katalog Produk</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <div class="logo-container">
+                <img src="logo.png" alt="Logo Perusahaan" class="logo">
+            </div>
+            <h1><i class="fas fa-store"></i> Katalog Produk</h1>
+            <div class="search-container">
+                <input type="text" id="search-input" placeholder="Cari produk...">
+                <button id="refresh-btn"><i class="fas fa-sync-alt"></i></button>
+            </div>
+        </div>
+    </header>
+
+    <main class="container">
+        <div class="filters">
+            <div class="filter-group">
+                <label for="category-filter"><i class="fas fa-filter"></i> Filter:</label>
+                <select id="category-filter">
+                    <option value="ALL">SEMUA KATEGORI</option>
+                    <!-- Categories will be loaded from spreadsheet -->
+                </select>
+            </div>
+            <div class="product-count" id="product-count">Memuat...</div>
+        </div>
+
+        <div id="loading" class="loading">
+            <i class="fas fa-spinner fa-spin"></i> Memuat produk...
+        </div>
+        <div id="product-container" class="product-grid"></div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>© <span id="current-year"></span> Katalog Produk</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
