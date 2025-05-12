@@ -140,10 +140,6 @@ function renderProducts(products) {
         <h3>${product.NAMA_PRODUK || "Nama Produk"}</h3>
         <p class="price">${product.HARGA ? formatPrice(product.HARGA) : "Harga tidak tersedia"}</p>
         ${product.KATEGORI ? `<p class="category">${product.KATEGORI}</p>` : ""}
-        <a href="https://wa.me/6281234567890?text=Saya%20tertarik%20dengan%20${encodeURIComponent(product.NAMA_PRODUK || "produk ini")}" 
-          class="cta-button">
-          <i class="fab fa-whatsapp"></i> Pesan Sekarang
-        </a>
       </div>
     </div>
   `).join("");
